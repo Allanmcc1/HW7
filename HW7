@@ -1,0 +1,23 @@
+Instructions: you are free to use Python or R code. Please turn in the rendered html file (extension .html), be sure to
+use the Quarto framework.
+1. Read the paper Fact, Fiction, and Factor Investing attached to this homework. Briefly explain each of the 10
+facts/fictions mentioned in the paper.
+2. In this exercise you will build a smart beta portfolio with a momentum tilt. Your out-of-sample testing is from 2005 to 2024.
+(a) For 2005 to 2024, at the start of each year t, select the top 500 companies based on the lag of market capitalization and estimate the Fama-French 4 (FF4) factor model below for each company. Use up to 60 and at least 36 monthly observations in the regression.
+E(R)−r =α +βMKTMKT+βSMBSMB+βHMLHML+βMOMMOM ifiiiii
+(b) For every year t construct a Long-Short portfolio where you go Long on the top 50 stocks ranked by βˆMOM i
+and you go Short on the bottom 50 stocks. Each portfolio is value-weighted.
+(c) Update the regression and the Long-Short portfolio at the start of year t + 1 and track it for that year.
+(d) Plot the performance of the portfolio over the out-of-sample years. In a separate graph plot the drawdowns.
+(e) Compute the portfolio’s summary statistics: average monthly return, standard deviation, VaR 1%, and
+Sharpe ratio (assume risk free rate of 3% annual)
+(f) Compute the FF4 model on the out-of-sample portfolio and show what it actual exposure to MOM was.
+3. Repeat the previous question with these 2 variations
+1. No short selling, so you have only a Long portfolio.
+2. Long portfolio AND the portfolio weights are not VW but rather weighted by βˆMOM i
+4. Suppose that from January 2020 to December 2024 your portfolio consisted of the stocks in the table below with their corresponding weight. Construct your portfolio risk report (this is the table in slide 20 of the Risk Budgets slide deck).
+Company
+WalMart McDonald’s NextEra Energy MetLife
+Apple
+Ticker Permno Weight
+WMT 55976 30% MCD 43449 20% NEE 24205 20% MET 87842 15% AAPL 14593 15%
